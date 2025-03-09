@@ -107,6 +107,12 @@ li{
     color: var(--backgorund-primary-color);
 }
 
+.card-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
 .card-text{
     display: flex;
     flex-direction: column;
@@ -173,12 +179,13 @@ li{
 }
 
 button {
+    margin: 0.8rem;
     background-color: var(--background-secondary-color);
     color: #b71c1c;
     font-size: 1.1rem;
     font-weight: bold;
     border: 0.1rem solid var(--backgorund-primary-color);
-    padding: 0.6rem 1.3rem;
+    padding: 0.6rem 0.9rem;
     border-radius: 3em; 
     cursor: pointer;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
@@ -196,6 +203,10 @@ footer{
 }
 
 @media screen and (min-width: 365px){
+    .card-picture{
+        width: 100%;
+    }
+
     .card-image{
         display: flex;
         width: 100%;
@@ -236,7 +247,37 @@ footer{
     }
 }
 
-@media screen and (min-width:800px) {
+@media screen and (min-width: 768px){
+    #events{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .box{
+        max-width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    button {
+        max-width: 40%;
+        align-self: center;
+    }
+
+    #bottom-box{
+        border-radius: 0;
+    }
+}
+
+@media screen and (min-width: 800px) {
     .card {
         flex-direction: row;
         align-items: stretch;
@@ -245,11 +286,11 @@ footer{
     }
 
     .card-picture{
-        width: 100%;    
+        min-width: 40%;
+        max-width: 40%;
     }
 
     .card-image {
-        width: 100%; 
         height: 100%;
         object-fit: cover;
         border-radius: 1rem 0 0 1rem; 
@@ -277,5 +318,53 @@ footer{
 
     .card-stats {
         padding-top: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    #columns{
+        display: flex;
+        flex-direction: row;
+        padding-top: 1rem;
+    }
+
+    #container{
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .box{
+        width: 33%;
+    }
+}
+
+@media screen and (min-width: 1360px) {
+    .icons{
+        display: flex;
+        height: 60%;
+        padding: 1rem;
+    }
+
+    .icon{
+        width: 50%;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .g1 {
+        background-image: url(./img/icons/rpg.png);
+    }
+
+    .g2 {
+        background-image: url(./img/icons/rts.png);
+    }
+
+    .m1 {
+        background-image: url(./img/icons/crafteo.png);
+    }
+
+    .m2 {
+        background-image: url(./img/icons/sigilo.png);
     }
 }
