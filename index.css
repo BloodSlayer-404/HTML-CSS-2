@@ -19,10 +19,15 @@ body{
 }
 
 header{
+    font-family: Outfit;
     text-align: center;
     background-color: var(--emphatize-color);
     color: var(--dark-text-color);
     padding-top: 0.2rem;
+}
+
+header h1{
+    font-size: 2.7rem;
 }
 
 nav{
@@ -34,6 +39,7 @@ nav{
 nav a{
     text-decoration: none;
     color: var(--dark-text-color);
+    font-size: 1.2rem;
 }
 
 section{
@@ -230,7 +236,7 @@ footer{
         object-fit:cover;
     }
 
-    nav{
+    nav a{
         font-size: 1.5rem;
     }
 
