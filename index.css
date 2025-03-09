@@ -1,0 +1,281 @@
+:root{
+    --background-color: #1b1b1b;
+    --emphatize-color: #1d9dff;
+    --dark-text-color: #0d0d0d;
+    --text-color: #f3f3f3;
+    --backgorund-primary-color:#2f2f2f;
+    --background-secondary-color: #d7d7d7;
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--background-color);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header{
+    text-align: center;
+    background-color: var(--emphatize-color);
+    color: var(--dark-text-color);
+    padding-top: 0.2rem;
+}
+
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 0.3rem;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--dark-text-color);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--text-color);
+    padding: 2dvh 1dvw;
+    margin: 1rem 4dvw;
+    text-align: justify;
+    background-color: var(--backgorund-primary-color);
+    border-radius: 1em;
+}
+
+h2{
+    text-align: center;
+    margin-bottom: 0.6em;
+    font-size: 2rem;
+}
+
+p{
+    padding: 0.1em 1em;
+}
+
+span{
+    color: var(--emphatize-color);
+}
+
+h3{
+    padding: 0.3em;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+ol, ul{
+    padding: 0 2.2rem;
+}
+
+#columns{
+    margin-top: 0.3rem;
+}
+
+li{
+    padding: 0.2em 0;
+}
+
+#def-img{
+    display: none;
+}
+
+#category{
+    padding: 0;
+}
+
+.category{
+    border-radius: 0;
+    margin: 0;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.3rem;
+    background-color: var(--background-secondary-color);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+    text-align: center;
+    padding: 1rem;
+    padding-bottom: 0;
+    margin: 0.3em 1em 1.1em 1em ;
+    color: var(--backgorund-primary-color);
+}
+
+.card-text{
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.card-text h4{
+    font-size: 1.5rem;
+}
+
+.card-stats{
+    display: flex;
+    padding: 1rem 0;
+    justify-content:space-evenly;
+}
+
+.card-stats h5{
+    font-size: 1rem;
+}
+
+.card-stats h6{
+    font-size: 0.7rem;
+}
+
+.stat{
+    flex: 1;
+    text-align: center;
+    padding: 0.3rem;
+}
+
+.line{
+    border-color: var(--dark-text-color);
+    border-style: none solid none solid;
+}
+
+.card-image{
+    display: none
+}
+
+#indie{
+    background-color: #3498db;
+}
+
+#AAA{
+    background-color: #f1c40f;
+}
+
+#service{
+    background-color: #9b59b6;
+    border-radius: 0 0 1em 1em;
+    margin-bottom: 1rem;
+}
+
+#events{
+    display: flex;
+    flex-direction: column;
+}
+
+.box{
+    background-color: #c12525;   
+    border: 0.1em solid var(--background-secondary-color);
+    text-align: center;
+    padding-bottom: 0.8em;
+}
+
+button {
+    background-color: var(--background-secondary-color);
+    color: #b71c1c;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border: 0.1rem solid var(--backgorund-primary-color);
+    padding: 0.6rem 1.3rem;
+    border-radius: 3em; 
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); 
+}
+
+#bottom-box{
+    border-radius: 0 0 1em 1em;
+}
+
+footer{
+    text-align: center;
+    background-color: var(--emphatize-color);
+    padding: 0.5rem;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 365px){
+    .card-image{
+        display: flex;
+        width: 100%;
+        height: auto;
+        object-fit:cover;
+        aspect-ratio: 16 / 9;
+        border-radius: 0.5rem;
+    }
+}
+
+@media screen and (min-width:600px) {
+    #main{
+        display: flex;
+        align-items: stretch;
+    }
+
+    #def-img{
+        display:flex;
+        width: 100%;
+        height: 100%;
+        object-fit:cover;
+    }
+
+    nav{
+        font-size: 1.5rem;
+    }
+
+    .card{
+        font-size: 1.3rem;
+    }
+
+    .card-stats h5{
+        font-size: 1.3rem;
+    }
+    
+    .card-stats h6{
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .card {
+        flex-direction: row;
+        align-items: stretch;
+        padding: 1rem;
+        text-align: left;
+    }
+
+    .card-picture{
+        width: 100%;    
+    }
+
+    .card-image {
+        width: 100%; 
+        height: 100%;
+        object-fit: cover;
+        border-radius: 1rem 0 0 1rem; 
+        
+    }
+
+    .card-text {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1rem;
+    }
+
+    .card-text p{
+        padding: 0;
+    }
+
+    h3{
+        font-size: 1.8rem;
+    }
+
+    .card-text h4 {
+        font-size: 1.6rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-stats {
+        padding-top: 1rem;
+    }
+}
